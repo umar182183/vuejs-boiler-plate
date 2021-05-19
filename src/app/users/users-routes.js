@@ -1,6 +1,7 @@
 import AppUsers from './users.vue';
 
 import AppUserList from './user-list/user-list.vue';
+import AppVideoMain from './video-main/video-main.vue';
 
 const userRoutes = [
   {
@@ -13,8 +14,13 @@ const userRoutes = [
         component: AppUserList
       },
       {
+        path: 'video-main',
+        name: 'video-main',
+        component: AppVideoMain
+      },
+      {
         path: '',
-        redirect: { name: 'user-list' }
+        redirect: { name: 'video-main' }
       }
     ]
   }
