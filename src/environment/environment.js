@@ -1,6 +1,10 @@
-const { VUE_APP_API_BASE_URL, NODE_ENV = '' } = process.env;
+const axios = require("axios");
 
-const environment = NODE_ENV.toLowerCase();
-const apiBaseUrl = VUE_APP_API_BASE_URL;
 
-export { environment, apiBaseUrl };
+export const dyneBackend = axios.create({
+  baseURL: process.env.VUE_APP_DYNTUBE_BASE_URL,
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "multipart/form-data"
+  }
+});
