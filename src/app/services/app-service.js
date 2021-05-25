@@ -19,7 +19,7 @@ class AppService {
         projectId: process.env.VUE_APP_PROJECT_ID
       }
     return dyneBackend
-      .post("videos", obj)
+      .post("videos", file)
       .then(res => {
         return res.data;
       })
